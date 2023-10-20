@@ -34,7 +34,11 @@ public class calculate {
                 ans = caled.multiply(cal);
                 break;
             case 3:
-                ans = caled.divide(cal);
+                try {
+                    ans = caled.divide(cal);
+                }catch (ArithmeticException AE) {
+                    ans = caled.divide(cal, 5, BigDecimal.ROUND_HALF_UP);
+                }
                 break;
             case 4:
             case 5:

@@ -134,7 +134,7 @@ public class calculator extends JFrame implements ActionListener {
 
     /**********************************************南柯一梦*******************************************************/
 
-    public static final String version = "V1.2.0";
+    public static final String version = "V1.3.2";
     // 南面组件
     private JLabel message = new JLabel(version, SwingConstants.CENTER);
 
