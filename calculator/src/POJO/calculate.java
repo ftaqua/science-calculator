@@ -22,7 +22,7 @@ public class calculate {
 
     // 计算器主体模块
     public BigDecimal work(BigDecimal caled, BigDecimal cal, String sign) {
-        BigDecimal ans;
+        BigDecimal ans = null;
         switch (signCode.indexOf(sign)) {
             case 0:
                 ans = caled.add(cal);
@@ -37,7 +37,11 @@ public class calculate {
                 try {
                     ans = caled.divide(cal);
                 }catch (ArithmeticException AE) {
-                    ans = caled.divide(cal, 5, BigDecimal.ROUND_HALF_UP);
+                    if(AE.getLocalizedMessage().equals("Non-terminating decimal expansion; no exact representable decimal result."))
+                        ans = caled.divide(cal, 5, BigDecimal.ROUND_HALF_UP);
+                    else
+                        ans = BigDecimal.valueOf(32202);
+                    System.out.println(AE.getLocalizedMessage());
                 }
                 break;
             case 4:

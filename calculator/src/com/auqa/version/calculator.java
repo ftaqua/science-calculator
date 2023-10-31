@@ -44,7 +44,6 @@ public class calculator extends JFrame implements ActionListener {
 
     /**********************************************北国风光*******************************************************/
 
-
     // 北面组件
     private JPanel northBox = new JPanel(new FlowLayout());
     private JTextField input = new JTextField();
