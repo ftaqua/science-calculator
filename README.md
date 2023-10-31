@@ -5,11 +5,11 @@ Just download it and compiled it by java!<br>
 <br>
 ----------------------------------------------v1.2.0--------------------------------------------<br>
 **author : ftaqua<br>
-**updating : 修改了输入右括号后仍有括号内运算的bug
+**updating : number in barcket have only one now.
 <br>
 <br>
 ----------------------------------------------v1.3.2---------------------------------------------<br>
 **author : ftaqua<br>
-**updating : 修改了无限循环小数抛出异常不解决的bug，现在无限循环小数会返回前5位<br>
+**updating : consult the divide bug, now any number divide zero will return 32202(ERROR),1/3*n just keep five num after the point<br>
 <br>
 <br>
