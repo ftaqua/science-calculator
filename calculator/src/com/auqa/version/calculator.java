@@ -141,10 +141,11 @@ public class calculator extends JFrame implements ActionListener {
     }
 
     // 南面组件
-    private JLabel message = new JLabel("welcome," + user, SwingConstants.CENTER);
+    private JLabel message = new JLabel("welcome," + this.user, SwingConstants.CENTER);
 
     // 设置南面组件
     private void setSouth() {
+        this.message.setText("welcome," + this.user);
         this.message.setPreferredSize(new Dimension((int) (EXAMPLE * 0.1), (int) (EXAMPLE * 0.1)));
         this.message.setForeground(Color.BLACK);
         this.add(this.message, BorderLayout.SOUTH);
@@ -360,14 +361,14 @@ public class calculator extends JFrame implements ActionListener {
         this.__init__();
         this.setNorth();
         this.setCenter();
+        // 获取uname
+        this.setUser(uname);
         this.setSouth();
         // 交互设置
         this.setListener();
         JOptionPane.showMessageDialog(this, "由于框架原因,本计算器打开时可能按钮显示不全,请最小化后打开");
         this.inSign();
         this.calculate.refresh();
-        // 获取uname
-        this.setUser(uname);
     }
 
     // 软件测试
